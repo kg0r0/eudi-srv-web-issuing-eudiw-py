@@ -34,9 +34,10 @@ class ConfService:
     # ------------------------------------------------------------------------------------------------
     # PID issuer service URL
     # service_url = "https://preprod.issuer.eudiw.dev:4443/"
-    service_url = os.getenv("SERVICE_URL","https://issuer.eudiw.dev/")
+    # service_url = os.getenv("SERVICE_URL","https://issuer.eudiw.dev/")
     # service_url = "https://127.0.0.1:5000/"
     #service_url = os.getenv("SERVICE_URL","https://dev.issuer.eudiw.dev/")
+    service_url = "https://desired-grouper-reliably.ngrok-free.app/"
 
     wallet_test_url = "https://dev.tester.issuer.eudiw.dev/"
 
@@ -270,6 +271,13 @@ class ConfService:
             "organization_name": "Test QEAA issuer",
             "namespace": "eu.europa.ec.eudi.loyalty.1",
         },
+        "eu.europa.ec.eudi.demo.1": {
+            "issuing_authority": "Test QEAA issuer",
+            "organization_id": pid_organization_id,
+            "validity": qeaa_validity,
+            "organization_name": "Test QEAA issuer",
+            "namespace": "eu.europa.ec.eudi.loyalty.1",
+        },
         "teste": {
             "issuing_authority": "Test EUDIW Issuer",
             "organization_id":pid_organization_id,
@@ -344,6 +352,7 @@ class ConfService:
         ],
         "country_selection": [
             "eu.europa.ec.eudi.loyalty_mdoc",
+            "eu.europa.ec.eudi.demo_mdoc",
             "eu.europa.ec.eudi.mdl_jwt_vc_json",
             "eu.europa.ec.eudi.mdl_mdoc",
             "eu.europa.ec.eudi.pid_jwt_vc_json",

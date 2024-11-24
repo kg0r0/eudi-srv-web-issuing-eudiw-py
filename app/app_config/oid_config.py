@@ -2,7 +2,8 @@ from urllib.parse import urlparse
 from config_service import ConfService as cfgservice
 
 parsed_url = urlparse(cfgservice.service_url)
-subdomain = parsed_url.netloc
+# subdomain = parsed_url.netloc
+subdomain = "desired-grouper-reliably.ngrok-free.app"
 
 CONFIG = {
   "logging": {

@@ -69,6 +69,16 @@
               "locale": "en"            }
           ]
         },
+        "email": {
+          "mandatory": true,
+          "value_type":"string",
+          "source":"user",
+          "display": [
+            {
+              "name": "Email",
+              "locale": "en"              }
+          ]
+        },
         "issue_date": {
           "mandatory": true,
           "source":"issuer",
